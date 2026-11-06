@@ -1,0 +1,1 @@
+export type Signal = {title:string; explanation:string}; export type Analysis = {classification:'alto_risco'|'atencao'|'poucos_sinais'; score:number; summary:string; signals:Signal[]; advice:string; source:string; disclaimer:string};

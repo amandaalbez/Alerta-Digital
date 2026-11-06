@@ -1,0 +1,1 @@
+export default { content: ['./index.html','./src/**/*.{js,ts,jsx,tsx}'], theme: { extend: { colors: { aqua: '#159b83' } } }, plugins: [] }
