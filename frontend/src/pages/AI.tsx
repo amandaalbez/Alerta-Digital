@@ -1,3 +1,100 @@
-import {BrainCircuit,FileText,SearchCheck,Lightbulb} from 'lucide-react';
-const steps=[['Mensagem recebida','O texto é enviado para análise.'],['Análise de características','O sistema procura padrões e contexto que merecem atenção.'],['Identificação de sinais','Possíveis indícios são organizados e explicados.'],['Orientação ao usuário','Você recebe sugestões para verificar a mensagem com segurança.']];
-export default function AI(){return <section className="page wrap narrow"><span className="eyebrow">TECNOLOGIA SEM COMPLICAÇÃO</span><h1>Como a inteligência artificial pode ajudar?</h1><p className="lead small-lead">A IA pode encontrar padrões em textos e ajudar a explicar por que uma mensagem merece atenção.</p><div className="info-block"><BrainCircuit/><h2>O que é Inteligência Artificial?</h2><p>É uma área da computação que desenvolve sistemas capazes de realizar tarefas que normalmente exigem capacidades como reconhecer padrões, interpretar linguagem e apoiar decisões.</p></div><h2 className="subheading">Da mensagem à orientação</h2><div className="steps">{steps.map(([title,desc],i)=><div className="step" key={title}><span>{i+1}</span><div><b>{title}</b><p>{desc}</p></div>{i===0?<FileText/>:i===1?<SearchCheck>:<Lightbulb/>}</div>)}</div><div className="two-columns"><div><h3>Como isso ajuda?</h3><p>Um analisador pode observar urgência, pedidos de dados, links e outros elementos. A ferramenta organiza os indícios para facilitar a compreensão.</p></div><div><h3>Criminosos também usam IA</h3><p>Textos, áudios e vídeos artificiais podem tornar golpes mais convincentes. Por isso, confirme pedidos inesperados por outro canal.</p></div></div><div className="privacy-alert"><Lightbulb/><p><b>Atenção:</b> a IA pode cometer erros. Uma análise automatizada não substitui seu senso crítico e não garante proteção absoluta.</p></div></section>}
+
+import {
+  BrainCircuit,
+  FileText,
+  SearchCheck,
+  Lightbulb,
+} from 'lucide-react';
+
+const steps = [
+  ['Mensagem recebida', 'O texto é enviado para análise.'],
+  [
+    'Análise de características',
+    'O sistema procura padrões e contexto que merecem atenção.',
+  ],
+  [
+    'Identificação de sinais',
+    'Possíveis indícios são organizados e explicados.',
+  ],
+  [
+    'Orientação ao usuário',
+    'Você recebe sugestões para verificar a mensagem com segurança.',
+  ],
+];
+
+export default function AI() {
+  return (
+    <section className="page wrap narrow">
+      <span className="eyebrow">TECNOLOGIA SEM COMPLICAÇÃO</span>
+
+      <h1>Como a inteligência artificial pode ajudar?</h1>
+
+      <p className="lead small-lead">
+        A IA pode encontrar padrões em textos e ajudar a explicar por que
+        uma mensagem merece atenção.
+      </p>
+
+      <div className="info-block">
+        <BrainCircuit />
+        <h2>O que é Inteligência Artificial?</h2>
+        <p>
+          É uma área da computação que desenvolve sistemas capazes de
+          realizar tarefas que normalmente exigem capacidades como
+          reconhecer padrões, interpretar linguagem e apoiar decisões.
+        </p>
+      </div>
+
+      <h2 className="subheading">Da mensagem à orientação</h2>
+
+      <div className="steps">
+        {steps.map(([title, desc], i) => (
+          <div className="step" key={title}>
+            <span>{i + 1}</span>
+
+            <div>
+              <b>{title}</b>
+              <p>{desc}</p>
+            </div>
+
+            {i === 0 ? (
+              <FileText />
+            ) : i === 1 ? (
+              <SearchCheck />
+            ) : (
+              <Lightbulb />
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="two-columns">
+        <div>
+          <h3>Como isso ajuda?</h3>
+          <p>
+            Um analisador pode observar urgência, pedidos de dados,
+            links e outros elementos. A ferramenta organiza os indícios
+            para facilitar a compreensão.
+          </p>
+        </div>
+
+        <div>
+          <h3>Criminosos também usam IA</h3>
+          <p>
+            Textos, áudios e vídeos artificiais podem tornar golpes
+            mais convincentes. Por isso, confirme pedidos inesperados
+            por outro canal.
+          </p>
+        </div>
+      </div>
+
+      <div className="privacy-alert">
+        <Lightbulb />
+        <p>
+          <b>Atenção:</b> a IA pode cometer erros. Uma análise
+          automatizada não substitui seu senso crítico e não garante
+          proteção absoluta.
+        </p>
+      </div>
+    </section>
+  );
+}
